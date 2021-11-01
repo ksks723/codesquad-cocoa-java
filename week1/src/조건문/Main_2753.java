@@ -7,10 +7,9 @@ public class Main_2753 {
         Scanner in = new Scanner(System.in);
 
         int A = in.nextInt();
+        String ck = "0";
 
-        if(A%4==0 && (A%100 !=0 || A%400 == 0)) System.out.println("1");
-        else System.out.println("0");
-
-
+        if(A%4==0 && (A%100 !=0 || A%400 == 0)) ck = "1";
+        System.out.println(ck);
     }
 }

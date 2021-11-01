@@ -8,9 +8,11 @@ public class Main_2439 {
         int a = sc.nextInt();
 
         for(int i= 1; i<=a; i++){
-            for(int j = a; j > 0;j--){
-                if(j>=i) System.out.print(" ");
-                else System.out.print("*");
+            for(int j=a; j>i; j--) {
+                System.out.print(" ");
+            }
+            for(int j=0; j<i; j++) {
+                System.out.print("*");
             }
             System.out.println();
         }
