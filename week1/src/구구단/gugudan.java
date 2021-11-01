@@ -1,8 +1,23 @@
 package 구구단;
 
+import java.util.Scanner;
+
 public class gugudan {
     public static void main(String[] args){
-        for(int i = 2; i< 10; i++){
+        Scanner sc = new Scanner(System.in);
+
+        int start = 0;
+        int end = 0;
+        int ck = 1;
+        while(ck == 1) {
+            System.out.println("시작단을 입력하세요 ex: 2");
+            start = sc.nextInt();
+            System.out.println("끝단을 입력하세요 ex: 9");
+            end = sc.nextInt();
+            if(start>0 && end>start) ck = 0;
+        }
+
+        for(int i = start; i<= end; i++){
             for(int j = 1; j<10; j++){
                 System.out.println(i + " * " + j + " = " + i*j);
             }
