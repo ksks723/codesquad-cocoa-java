@@ -7,8 +7,12 @@ public class Main_11720 {
         Scanner sc = new Scanner(System.in);
 
         int a = sc.nextInt();
-
-
-
+        String b = sc.next();
+        char[] inputArr = b.toCharArray();
+        int sum = 0;
+        for(int i=0; i<a; i++){
+            sum += inputArr[i] - '0';
+        }
+        System.out.println(sum);
     }
 }
