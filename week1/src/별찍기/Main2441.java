@@ -2,16 +2,16 @@ package 별찍기;
 
 import java.util.Scanner;
 
-public class Main_2439 {
+public class Main2441 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
 
-        for(int i= 1; i<=a; i++){
-            for(int j=a; j>i; j--) {
+        for(int i= 0; i< a; i++){
+            for(int j=0; j<i; j++) {
                 System.out.print(" ");
             }
-            for(int j=0; j<i; j++) {
+            for(int j=0; j<a-i; j++) {
                 System.out.print("*");
             }
             System.out.println();

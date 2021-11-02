@@ -2,7 +2,7 @@ package 조건문;
 
 import java.util.Scanner;
 
-public class Main_1330 {
+public class Main1330 {
     public static void main(String[] args){
         //1330번
         Scanner in = new Scanner(System.in);
