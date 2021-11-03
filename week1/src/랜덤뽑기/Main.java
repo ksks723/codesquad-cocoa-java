@@ -8,6 +8,9 @@ import java.util.Random;
 public class Main{
    public static void main(String[] args) throws IOException{
       int answer = getNum();
+      if(ckNum(answer) == 1) {
+         answer = getNum();
+      }
       String[] pickMem = getMember(answer);
       printMember(pickMem);
    }
@@ -16,6 +19,14 @@ public class Main{
       System.out.println("몇 명인가요? :");
       int answer = Integer.parseInt(re.readLine());
       return answer;
+   }
+
+   public static int ckNum(int n) {
+      if(n<11 && n>0){
+         return 0;
+      }
+      System.out.println("1~10 사이의 숫자만 입력해주세요 ");
+      return 1;
    }
    public static String[] getMember(int n){
       String[] member = {"검봉","Hanse","Yan","Ella","Konda","sonny","반스","Teemo","Bart","Jarry"};
