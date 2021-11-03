@@ -14,7 +14,9 @@ public class gugudan {
             start = sc.nextInt();
             System.out.println("끝단을 입력하세요 ex: 9");
             end = sc.nextInt();
-            if(start>0 && end>start) ck = false;
+            if(start>0 && end>start) {
+                ck = false;
+            }
         }
 
         for(int i = start; i<= end; i++){
