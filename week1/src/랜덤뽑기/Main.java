@@ -25,7 +25,7 @@ public class Main {
     public static Boolean isValidNumber(int n) {
         int MIN_MEMBER_COUNT = 0;
         int MAX_MEMBER_COUNT = 11;
-        if (n < MAX_MEMBER_COUNT && n >= MIN_MEMBER_COUNT) {
+        if (n < MAX_MEMBER_COUNT && n > MIN_MEMBER_COUNT) {
             return true;
         }
         System.out.println("1~10 사이의 숫자만 입력해주세요 ");
