@@ -7,30 +7,32 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        int answer = getNum();
-        if (ckNum(answer) == 1) {
-            answer = getNum();
+        int answer = takeMemberCount();
+        while (!isValidNumber(answer)) {
+            answer = takeMemberCount();
         }
-        String[] pickMem = getMember(answer);
+        String[] pickMem = getRandomMember(answer);
         printMember(pickMem);
     }
 
-    public static int getNum() throws IOException {
+    public static int takeMemberCount() throws IOException {
         BufferedReader re = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("몇 명인가요? :");
         int answer = Integer.parseInt(re.readLine());
         return answer;
     }
 
-    public static int ckNum(int n) {
-        if (n < 11 && n > 0) {
-            return 0;
+    public static Boolean isValidNumber(int n) {
+        int MIN_MEMBER_COUNT = 0;
+        int MAX_MEMBER_COUNT = 11;
+        if (n < MAX_MEMBER_COUNT && n >= MIN_MEMBER_COUNT) {
+            return true;
         }
         System.out.println("1~10 사이의 숫자만 입력해주세요 ");
-        return 1;
+        return false;
     }
 
-    public static String[] getMember(int n) {
+    public static String[] getRandomMember(int n) {
         String[] member = {"검봉", "Hanse", "Yan", "Ella", "Konda", "sonny", "반스", "Teemo", "Bart", "Jarry"};
         Random rd = new Random();
         String[] pickMem = new String[n];
