@@ -8,10 +8,10 @@ public class NameFactory {
 
     @Override
     public String toString() {
-        return "당신의 이름은"+ getYearName() + " " + getMonthName() + getDayName() + "입니다.";
+        return "당신의 이름은 " + getYearName() + " " + getMonthName() + getDayName() + "입니다.";
     }
 
-    public NameFactory(int year, int month, int day){
+    public NameFactory(int year, int month, int day) {
         this.year = year;
         this.month = month;
         this.day = day;

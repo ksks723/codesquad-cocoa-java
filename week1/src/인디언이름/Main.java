@@ -32,12 +32,12 @@ public class Main {
         int year = userBirth[0].charAt(3) - '0';
         int month = Integer.parseInt(userBirth[1]);
         int day = Integer.parseInt(userBirth[2]);
-        int[] userBirthInt = new int[]{year, month, day};
+        int[] userBirthInt = new int[]{year, month - 1, day - 1};
         return userBirthInt;
     }
 
     public static NameFactory makeIndiansName(int[] userBirth) {
-        NameFactory nf = new NameFactory(userBirth[0],userBirth[1],userBirth[2]);
+        NameFactory nf = new NameFactory(userBirth[0], userBirth[1], userBirth[2]);
         return nf;
     }
 
