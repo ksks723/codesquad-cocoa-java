@@ -8,13 +8,12 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        System.out.println(getBirth());
+        String[] userBirth = getBirth().split(" ");
 
     }
 
     public static String getBirth() throws IOException {
         BufferedReader re = new BufferedReader(new InputStreamReader(System.in));
-        String pattern = "^(19[0-9][0-9]|20\\d{2})\\s(0[0-9]|1[0-2])\\s(0[1-9]|[1-2][0-9]|3[0-1])$";
         System.out.println("생년월일을 입력해 주세요 ex)1999 07 23");
         String userBirth = re.readLine();
         while (!isValidBirth(userBirth)) {
