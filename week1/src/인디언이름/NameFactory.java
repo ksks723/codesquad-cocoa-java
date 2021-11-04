@@ -8,7 +8,7 @@ public class NameFactory {
 
     @Override
     public String toString() {
-        return "당신의 이름은"+ getYearName() + getMonthName() + getDayName();
+        return "당신의 이름은"+ getYearName() + " " + getMonthName() + getDayName() + "입니다.";
     }
 
     public NameFactory(int year, int month, int day){

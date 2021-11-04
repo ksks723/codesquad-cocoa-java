@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         String[] userBirth = getBirth().split(" ");
         int[] userBirthInt = birthManufacture(userBirth);
-        //NameFactory nf = makeIndiansName(userBirthInt);
-        //printName(nf);
+        NameFactory nf = makeIndiansName(userBirthInt);
+        printName(nf);
     }
 
     public static String getBirth() throws IOException {
@@ -29,13 +29,10 @@ public class Main {
     }
 
     public static int[] birthManufacture(String[] userBirth) {
-        int year = Integer.parseInt(userBirth[0].substring(3, 3));
+        int year = userBirth[0].charAt(3) - '0';
         int month = Integer.parseInt(userBirth[1]);
         int day = Integer.parseInt(userBirth[2]);
         int[] userBirthInt = new int[]{year, month, day};
-        for(int i : userBirthInt){
-            System.out.println(i);
-        }
         return userBirthInt;
     }
 
