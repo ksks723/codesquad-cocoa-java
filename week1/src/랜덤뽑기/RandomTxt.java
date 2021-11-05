@@ -30,7 +30,7 @@ public class RandomTxt {
         if (n < MAX_MEMBER_COUNT && n > MIN_MEMBER_COUNT) {
             return true;
         }
-        System.out.println("1~10 사이의 숫자만 입력해주세요 ");
+        System.out.println("1~14 사이의 숫자만 입력해주세요 ");
         return false;
     }
 
