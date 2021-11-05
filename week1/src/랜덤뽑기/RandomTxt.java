@@ -26,7 +26,7 @@ public class RandomTxt {
 
     public static Boolean isValidNumber(int n) {
         int MIN_MEMBER_COUNT = 0;
-        int MAX_MEMBER_COUNT = 11;
+        int MAX_MEMBER_COUNT = 15;
         if (n < MAX_MEMBER_COUNT && n > MIN_MEMBER_COUNT) {
             return true;
         }
@@ -39,7 +39,7 @@ public class RandomTxt {
         Random rd = new Random();
         String[] pickMem = new String[n];
         for (int i = 0; i < n; i++) {
-            pickMem[i] = member[rd.nextInt(10)];
+            pickMem[i] = member[rd.nextInt(14)];
             for (int j = 0; j < i; j++) {
                 if (pickMem[i].equals(pickMem[j])) {
                     i--;
@@ -77,7 +77,7 @@ public class RandomTxt {
             br.close();
         }
 
-        return readTxt.split(" ");
+        return readTxt.split(",");
     }
 
 }
