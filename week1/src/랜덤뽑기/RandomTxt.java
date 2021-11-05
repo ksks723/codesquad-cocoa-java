@@ -24,13 +24,13 @@ public class RandomTxt {
         return answer;
     }
 
-    public static Boolean isValidNumber(int n) {
+    public static Boolean isValidNumber(int n) throws IOException {
         int MIN_MEMBER_COUNT = 0;
-        int MAX_MEMBER_COUNT = 15;
+        int MAX_MEMBER_COUNT = getTxt().length + 1;
         if (n < MAX_MEMBER_COUNT && n > MIN_MEMBER_COUNT) {
             return true;
         }
-        System.out.println("1~14 사이의 숫자만 입력해주세요 ");
+        System.out.println("1 ~ "+ --MAX_MEMBER_COUNT  +" 사이의 숫자만 입력해주세요 ");
         return false;
     }
 
