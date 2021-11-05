@@ -1,11 +1,13 @@
 package 랜덤뽑기;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-public class Main {
+
+public class RandomTxt {
     public static void main(String[] args) throws IOException {
         int answer = takeMemberCount();
         while (!isValidNumber(answer)) {
@@ -32,8 +34,8 @@ public class Main {
         return false;
     }
 
-    public static String[] getRandomMember(int n) {
-        String[] member = {"검봉", "Hanse", "Yan", "Ella", "Konda", "sonny", "반스", "Teemo", "Bart", "Jarry"};
+    public static String[] getRandomMember(int n) throws IOException {
+        String[] member = getTxt();
         Random rd = new Random();
         String[] pickMem = new String[n];
         for (int i = 0; i < n; i++) {
@@ -54,6 +56,28 @@ public class Main {
                 System.out.print(", ");
             }
         }
+    }
+
+    public static String[] getTxt() throws IOException {
+        String readTxt = "";
+        BufferedReader br = new BufferedReader(
+                new FileReader("C:\\Users\\ksks7\\IdeaProjects\\codesquad-cocoa-java\\week1\\src\\랜덤뽑기\\name.txt"));
+        try {
+            StringBuilder builder = new StringBuilder();
+            String line = br.readLine();
+
+            while (line != null) {
+                builder.append(line);
+                line = br.readLine();
+            }
+            readTxt = builder.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            br.close();
+        }
+
+        return readTxt.split(" ");
     }
 
 }
